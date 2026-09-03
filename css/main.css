@@ -1,10 +1,53 @@
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 0, 0, 0.2);
 }
-body {
+html,body{
+  height: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: rgb(66, 66, 66);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  overflow: hidden; 
+}
+body{
+  display: flex;
+  width: 100%;
+  background-color: rgb(63, 63, 63);
+  color: white;
+}
+main{
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
+#nav{
+  width: 3%;
+  height: 100%;
+  background-color: rgb(63, 63, 63);
+}
+#main{
+  width:97%;
+  height: 100%;
+  background-color: rgb(63, 63, 63);
+}
+#banner{
+  display: flex;
+  height: 30%;
+  width: 100%;
+}
+#apps{
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+#todo{
+  width: 60%;
+  height: 100%;
+}
+#counters{
+  width: 40%;
+  height: 100%;
+}

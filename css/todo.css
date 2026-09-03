@@ -1,89 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-}
-
-body {
-  background:
-    radial-gradient(
-      circle at 20% 0%,
-      rgba(255,255,255,.08),
-      transparent 35%
-    ),
-    linear-gradient(
-      135deg,
-      rgb(55,55,55),
-      rgb(32,32,32)
-    );
-
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-
-main {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
 
 .todo {
-  width: min(90%,1000px);
-  height: 95vh;
-  margin-top: 2.5vh;
-
+  height: 100%;  
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgb(48,48,48),
-      rgb(38,38,38)
-    );
-
-  border-radius: 25px;
-
   outline: 1px solid rgba(255,255,255,.08);
-
-  box-shadow:
-    0 15px 40px rgba(0,0,0,.5),
-    inset 0 0 20px rgba(255,255,255,.04);
-
   overflow: hidden;
 }
-
-h1 {
-  width: 100%;
-  text-align: center;
-
-  font-size: clamp(25px,3vw,40px);
-
-  margin: 20px 0;
-
-  letter-spacing: 2px;
-}
-
 form {
-  width: 90%;
-
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 15px;
-
-  margin-bottom: 20px;
+  flex-shrink: 0; 
+  padding: 15px 0; 
 }
 
 label {
@@ -92,17 +23,12 @@ label {
 
 input {
   all: unset;
-
   width: min(50%,400px);
   height: 40px;
-
   padding: 0 20px;
-
   background: white;
   color: black;
-
   border-radius: 20px;
-
   font-size: 16px;
 }
 
@@ -134,39 +60,36 @@ button:hover {
 
 .columns {
   flex: 1;
-
   width: 100%;
-
   display: flex;
-
   gap: 15px;
-
-  padding: 15px;
+  padding: 0 15px 15px 15px;  
+  min-height: 0;         
+  overflow: hidden; 
 }
+.column {
+    overflow-y: auto; 
+  
+    &::-webkit-scrollbar {
+        display: none; 
+        width: 0;      
+    }
+
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
 
 .column {
   flex: 1;
-
-  background:
-    linear-gradient(
-      160deg,
-      rgb(65,65,65),
-      rgb(48,48,48)
-    );
-
-  border-radius: 20px;
-
-  padding: 10px;
-
   overflow-y: auto;
 }
 
 h2 {
   text-align: center;
-
   font-size: clamp(18px,2vw,25px);
-
   margin-bottom: 10px;
+
 }
 
 ul {
@@ -370,28 +293,3 @@ button {
     background .3s ease;
 }
 
-
-@media(max-width:700px) {
-
-  .columns {
-    flex-direction: column;
-  }
-
-  .todo {
-
-    width:100%;
-    height:100%;
-
-    margin-top:0;
-
-    border-radius:0;
-  }
-
-  form {
-    flex-wrap: wrap;
-  }
-
-  input {
-    width:80%;
-  }
-}

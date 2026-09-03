@@ -4,9 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/todo.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/nav.css">
   <title>Document</title>
 </head>
 <body>
+  <main>
+    <div id="nav"></div>
+    <div id="main">
+      <div class="container" id="banner"></div>
+      <div id="apps">
+        <div class="todo" id="todo">
+          <form id="todo-form" autocomplete="off">
+            <label for="todo-input">Task</label>
+            <input id="todo-input" type="text" placeholder="Add task...">
+            <button id="button-add" class="button__input" type="submit">Add</button>
+          </form>
+          <div class="columns">
+            <div class="column" id="column-now">
+              <h2>Now</h2>
+              <ul id="list-now"></ul>
+            </div>
+            <div class="column" id="column-later">
+              <h2>Later</h2>
+              <ul id="list-later"></ul>
+            </div>
+          </div>
+        </div>
+        <div id="counters">
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="js/todo.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
