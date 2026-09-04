@@ -1,0 +1,60 @@
+#banner{
+  background-image: url('/img/1.jpg');
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+#banner-main{
+  height: 100%;
+  width: 90%;
+}
+#countdown-block{
+  height: 100%;
+  width: 10%;
+}
+#banner-main-content{
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#banner-main-links{
+  height: 10%;
+  width: 100%;
+}
+#date-and-time{
+  width: 30%;
+  height: 100%;
+  
+
+}
+#profile{
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  border-radius: 15px;
+}
+#avatar{
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 15px;
+}
+#nickname{
+  width: 50%;
+  height: 100%;
+
+}
+#time{
+  height: 50%;
+  width: 100%;
+
+  color: white;
+
+}
+#date{
+  width: 100%;
+  height: 50%;
+  color: white;
+
+}
