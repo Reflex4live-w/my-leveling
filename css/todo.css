@@ -25,7 +25,7 @@ label {
   font-size: clamp(14px,2vw,18px);
 }
 
-input {
+#todo-input {
   all: unset;
   width: min(50%,400px);
   height: 40px;
