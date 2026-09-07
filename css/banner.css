@@ -1,14 +1,16 @@
-#banner{
+#banner {
   background-image: url('/img/4.jpg');
-  background-size: cover;      
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-#banner-main{
+
+#banner-main {
   height: 100%;
   width: 90%;
 }
-#countdown-block{
+
+#countdown-block {
   height: 100%;
   width: 10%;
   display: flex;
@@ -16,20 +18,23 @@
   align-items: center;
   justify-content: space-around;
 }
-.countdown{
+
+.countdown {
   width: 130px;
   height: 130px;
   border-radius: 65px;
   background-color: grey;
 }
-#banner-main-content{
+
+#banner-main-content {
   margin-top: 60px;
   height: calc(100% - 120px);
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-#banner-main-links{
+
+#banner-main-links {
   height: 60px;
   width: 100%;
   display: flex;
@@ -37,16 +42,15 @@
   gap: 10px;
   padding-left: 10px;
 }
-.link{
+
+.link {
   width: 40px;
   height: 40px;
   background-color: grey;
   border-radius: 20px;
-
-
-
 }
-#date-and-time{
+
+#date-and-time {
   width: 20%;
   height: 100%;
   display: flex;
@@ -54,31 +58,30 @@
   justify-content: center;
   flex-direction: column;
 }
-#time{
+
+#time {
   font-size: 50px;
   font-weight: bold;
   text-shadow: 
     0 0 20px rgba(0, 0, 0, 0.4),
     0 2px 10px rgba(0, 0, 0, 0.5);
-  
- 
 }
-#date{
+
+#date {
   font-size: 20px;
   text-shadow: 
     0 0 20px rgba(0, 0, 0, 0.4),
     0 2px 10px rgba(0, 0, 0, 0.5);
-
 }
-#profile{
+
+#profile {
   width: 40%;
   height: 100%;
   display: flex;
-
-  
   border-radius: 15px;
 }
-#avatar{
+
+#avatar {
   width: 50%;
   height: 100%;
   border-radius: 15px;
@@ -86,17 +89,19 @@
   justify-content: center;
   align-items: center;
 }
-#avatar-img{
+
+#avatar-img {
   width: 250px;
   height: 250px;
   border-radius: 125px;
-  object-fit: cover;           
+  object-fit: cover;
   display: block;
   box-shadow: 
     0 0 20px rgba(0, 0, 0, 0.4),
     0 2px 10px rgba(0, 0, 0, 0.2);
 }
-#nickname{
+
+#nickname {
   width: 40%;
   height: 100%;
   display: flex;
@@ -107,14 +112,129 @@
   text-shadow: 
     0 0 20px rgba(0, 0, 0, 0.4),
     0 2px 10px rgba(0, 0, 0, 0.2);
-
 }
-#block-center{
+
+#block-center {
   width: 40%;
   height: 100%;
 }
-#dota-rang{
+
+#dota-rang {
   width: 10%;
   height: 100%;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rang {
+  --flash-color: white;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 50px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 0 30px rgba(255, 255, 255, 0.15),
+    0 0 60px rgba(255, 255, 255, 0.07),
+    0 0 100px rgba(255, 255, 255, 0.03),
+    inset 0 0 30px rgba(255, 255, 255, 0.20),
+    inset 0 0 60px rgba(255, 255, 255, 0.10),
+    inset 0 0 100px rgba(255, 255, 255, 0.04);
+  animation: glow-pulse 5s ease-in-out infinite;
+  will-change: box-shadow, background;
+}
+
+/* ===== ¬—œ€ÿ ¿ ¡≈À¿ﬂ ===== */
+@keyframes flash-green {
+  0% {
+    box-shadow: 
+      0 0 60px rgba(0, 255, 100, 0.7),
+      0 0 120px rgba(0, 255, 100, 0.4),
+      0 0 200px rgba(0, 255, 100, 0.2),
+      inset 0 0 60px rgba(0, 255, 100, 0.5),
+      inset 0 0 120px rgba(0, 255, 100, 0.25);
+    background: rgba(0, 255, 100, 0.25);
+  }
+  100% {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.15),
+      0 0 60px rgba(255, 255, 255, 0.07),
+      0 0 100px rgba(255, 255, 255, 0.03),
+      inset 0 0 30px rgba(255, 255, 255, 0.20),
+      inset 0 0 60px rgba(255, 255, 255, 0.10),
+      inset 0 0 100px rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+/* ===== ¬—œ€ÿ ¿  –¿—Õ¿ﬂ ===== */
+@keyframes flash-red {
+  0% {
+    box-shadow: 
+      0 0 60px rgba(255, 0, 0, 0.7),
+      0 0 120px rgba(255, 0, 0, 0.4),
+      0 0 200px rgba(255, 0, 0, 0.2),
+      inset 0 0 60px rgba(255, 0, 0, 0.5),
+      inset 0 0 120px rgba(255, 0, 0, 0.25);
+    background: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.15),
+      0 0 60px rgba(255, 255, 255, 0.07),
+      0 0 100px rgba(255, 255, 255, 0.03),
+      inset 0 0 30px rgba(255, 255, 255, 0.20),
+      inset 0 0 60px rgba(255, 255, 255, 0.10),
+      inset 0 0 100px rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* ===== Œ—ÕŒ¬Õ¿ﬂ œ”À‹—¿÷»ﬂ ===== */
+@keyframes glow-pulse {
+  0%, 100% {
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.08),
+      0 0 40px rgba(255, 255, 255, 0.04),
+      0 0 60px rgba(255, 255, 255, 0.015),
+      inset 0 0 20px rgba(255, 255, 255, 0.10),
+      inset 0 0 40px rgba(255, 255, 255, 0.05),
+      inset 0 0 60px rgba(255, 255, 255, 0.02);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      0 0 40px rgba(255, 255, 255, 0.25),
+      0 0 80px rgba(255, 255, 255, 0.12),
+      0 0 120px rgba(255, 255, 255, 0.05),
+      inset 0 0 40px rgba(255, 255, 255, 0.30),
+      inset 0 0 80px rgba(255, 255, 255, 0.15),
+      inset 0 0 120px rgba(255, 255, 255, 0.06);
+  }
+}
+
+#image-rang {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+
+#dota-input {
+  all: unset;
+  font-size: 20px;
+  color: white;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  text-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.4),
+    0 2px 10px rgba(0, 0, 0, 0.2);
 }
