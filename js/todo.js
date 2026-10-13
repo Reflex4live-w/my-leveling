@@ -1,13 +1,9 @@
 const form = document.getElementById('todo-form');
-
 const input = document.getElementById('todo-input');
-
 const ulNow = document.getElementById('list-now');
 const ulLater = document.getElementById('list-later');
 
-
 let tasks = [];
-
 
 //Обработчик событий по соданию li
 form.addEventListener('submit', (event) => {
@@ -57,8 +53,6 @@ function addTask(value) {
   tasks.push(newTask);  
 
   return newTask 
-  
-  
 }
 
 // генератор через Date.now()
@@ -123,13 +117,11 @@ function renderTask() {
 
     li.dataset.id = task.id;
 
-    
     const text = document.createElement('div')
     text.textContent = task.text;
 
     if (task.favorite === true) {
       li.classList.add('favorite');
-      
     } 
 
     if (task.complete === true) {
@@ -160,10 +152,7 @@ function renderTask() {
         } else {
           ulLater.append(li);
         }
-    
       }
-      
-      
     })
 
     li.addEventListener('click', (event) => {
@@ -171,7 +160,6 @@ function renderTask() {
       li.classList.toggle('complete');
       updateTask(id, li)
       savedTask()
-
     })
 
    //создане кнопки удаления
@@ -184,7 +172,6 @@ function renderTask() {
       deleteTask(id);
       savedTask();
       renderTask()
-  
     })
 
     li.append(favBtn, text, delBtn);
@@ -220,9 +207,8 @@ function renderTask() {
       savedTask()
     })
   }
-  
-
 }
+
 
 
 //Для отрисовки после перезапуска
@@ -232,6 +218,5 @@ function init()  {
 }
 
 init();
-
 
 console.log(tasks)
